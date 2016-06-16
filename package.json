@@ -23,6 +23,7 @@
   "author": "joepeak",
   "license": "Apache-2.0",
   "dependencies": {
+    "koa": "^2.0.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.4.0",
@@ -84,4 +85,3 @@
   },
   "homepage": "https://github.com/joepeak/node-web#readme"
 }
-
