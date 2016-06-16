@@ -1,0 +1,87 @@
+{
+  "name": "demo-node-web",
+  "version": "1.0.0",
+  "description": "React单页应用, Router, Redux",
+  "main": "server.js",
+  "scripts": {
+    "test": "tape ./test | faucet",
+    "cover": "istanbul cover tape ./test",
+    "docs": "esdoc -c esdoc.json",
+    "start": "gulp",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joepeak/node-web.git"
+  },
+  "keywords": [
+    "koa",
+    "react",
+    "spa"
+  ],
+  "author": "joepeak",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.4.0",
+    "react-router": "^2.0.1",
+    "react-router-redux": "^4.0.0",
+    "redux": "^3.3.1",
+    "redux-thunk": "^1.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.5",
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.4.5",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-array-includes": "^2.0.3",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-polyfill": "^6.7.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "css-loader": "^0.23.0",
+    "del": "^2.1.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^1.0.2",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.11.2",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "faucet": "0.0.1",
+    "file-loader": "^0.8.5",
+    "gulp": "^3.9.0",
+    "gulp-change": "^1.0.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-inject-string": "^1.1.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-qn": "^0.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-util": "^3.0.7",
+    "istanbul": "^0.4.1",
+    "jsdom": "^7.1.1",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
+    "localStorage": "^1.0.3",
+    "postcss": "^5.0.14",
+    "postcss-grid": "^2.0.0",
+    "postcss-loader": "^0.8.2",
+    "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.2.0",
+    "style-loader": "^0.13.0",
+    "tape": "^4.2.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "bugs": {
+    "url": "https://github.com/joepeak/node-web/issues"
+  },
+  "homepage": "https://github.com/joepeak/node-web#readme"
+}
+
