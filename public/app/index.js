@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import Header from '../pages/header';
 import Footer from '../pages/Footer';
 
-import '../static/main.css';
+import './main.css';
 
 // main class
 const App = React.createClass({

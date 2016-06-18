@@ -7,14 +7,12 @@ import webpack from "webpack";
 import ExtractTextPlugin from "extract-text-webpack-plugin";
 
 import autoprefixer from 'autoprefixer';
-import grid from 'postcss-grid';
 
 export default (DEBUG, PATH, PORT=3000) => ({
     entry: (DEBUG ? [
         `webpack-dev-server/client?http://localhost:${PORT}`,   // WebpackDevServer host and port
         `webpack/hot/only-dev-server`, // "only" prevents reload on syntax errors
     ] : []).concat([
-        //'./public/main.less',
         'babel-polyfill',
         './public/index',
     ]),
@@ -50,22 +48,22 @@ export default (DEBUG, PATH, PORT=3000) => ({
             {
                 test: /\.css$/,
                 loader: DEBUG
-                    ? "style!css!postcss"
-                    : ExtractTextPlugin.extract('style-loader', 'css-loader?-convertValues!postcss')
+                    ? "style-loader!css-loader!postcss-loader"
+                    : ExtractTextPlugin.extract('style-loader', 'css-loader?-convertValues!postcss-loader')
             },
 
             {
                 test: /\.less$/,
                 loader: DEBUG
-                    ? "style!css!autoprefixer!less"
-                    : ExtractTextPlugin.extract("style-loader", "css-loader?-convertValues!postcss!less-loader")
+                    ? "style-loader!css-loader!postcss-loader!less"
+                    : ExtractTextPlugin.extract("style-loader", "css-loader?-convertValues!postcss-loader!less-loader")
             },
 
             {
                 test: /\.scss$/,
                 loader: DEBUG
-                    ? "style!css!autoprefixer!sass"
-                    : ExtractTextPlugin.extract('style-loader', 'css-loader?-convertValues!postcss!sass-loader')
+                    ? "style-loader!css-loader!postcss-loader!sass"
+                    : ExtractTextPlugin.extract('style-loader', 'css-loader?-convertValues!postcss-loader!sass-loader')
             },
 
             { test: /\.json$/, loader: 'json',},
@@ -120,12 +118,11 @@ export default (DEBUG, PATH, PORT=3000) => ({
 
     postcss: function () {
         return [
-            grid({gutter: 10}),
             autoprefixer,
         ];
     },
 
-    cache: DEBUG,
+    cache: !DEBUG,
 
     debug: DEBUG,
 

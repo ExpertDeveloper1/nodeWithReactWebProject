@@ -1,0 +1,40 @@
+#mainContainer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainContainer > div > header,
+#mainContainer > div > footer {
+    flex: 1;
+}
+
+#mainContainer > div > main{
+    display: flex;
+    flex: 1;
+}
+
+.mainNav,
+.ads{
+    /* 两个边栏的宽度设为12em */
+    flex: 0 0 16em;
+}
+
+.content{
+    flex: 1;
+}
+
+.mainNav{
+    order: -1;
+}
+
+@media (max-width: 768px) {
+    #mainContainer > div > main {
+        flex-direction: column;
+        flex: 1;
+    }
+    .mainNav,
+    .ads,
+    .content {
+        flex: auto;
+    }
+}
