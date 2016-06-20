@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import Header from '../pages/header';
-import Footer from '../pages/Footer';
+import Footer from '../pages/footer';
 
 import './main.css';
 
