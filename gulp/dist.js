@@ -5,5 +5,5 @@
 import runSequence from "run-sequence";
 
 export default (gulp) => {
-    gulp.task('dist',() => runSequence('dist:clean','dist:build','dist:index'));
+    gulp.task('dist',() => runSequence('dist:clean','dist:build','dist:index','dist:server'));
 }
